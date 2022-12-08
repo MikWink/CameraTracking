@@ -21,6 +21,8 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+		ofPixelsRef trackRedPixels(ofPixelsRef pixels);
+		ofPixelsRef trackGreenPixels(ofPixelsRef pixels);
 		
 		ofVideoGrabber vidGrabber;
 		ofPixels videoInverted;
@@ -34,6 +36,13 @@ class ofApp : public ofBaseApp{
 
 		int centerX;
 		int centerY;
+
+		int objectCenterXGreen;
+		int objectCenterYGreen;
+		int binaryPixelCounterGreen;
+
+		int centerXGreen;
+		int centerYGreen;
 
 		int middleOfX;
 
